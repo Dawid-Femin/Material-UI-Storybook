@@ -1,13 +1,11 @@
 import type { Preview, Decorator } from '@storybook/react'
-import { ThemeProvider, CssBaseline, createTheme } from '@mui/material'
-
-const lightTheme = createTheme({ palette: { mode: 'light' } })
-const darkTheme = createTheme({ palette: { mode: 'dark' } })
+import { ThemeProvider, CssBaseline } from '@mui/material'
+import { themes } from '../src/themes'
 
 const withMuiTheme: Decorator = (Story, context) => {
-  const isDark = context.globals['theme'] === 'dark'
+  const theme = context.globals['theme'] === 'dark' ? themes.dark : themes.light
   return (
-    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <Story />
     </ThemeProvider>
