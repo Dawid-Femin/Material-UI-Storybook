@@ -15,7 +15,8 @@
     "changeset": "changeset",
     "version": "changeset version",
     "release": "pnpm build && changeset publish",
-    "publint": "publint"
+    "publint": "publint",
+    "mcp": "storybook-mcp"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
@@ -39,6 +40,7 @@
     "@emotion/styled": "^11.14.1",
     "@eslint/js": "^10.0.1",
     "@mui/material": "^9",
+    "@storybook/mcp": "^0.7.0",
     "@storybook/react": "^10.3.5",
     "@storybook/react-vite": "^10.3.5",
     "@vitejs/plugin-react": "^6.0.1",
